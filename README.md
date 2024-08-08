@@ -1,32 +1,58 @@
-# Customer Churn Data Pipeline
+Customer Churn Data Pipeline
+Project Description
+This project focuses on building a data processing pipeline for a customer churn dataset. The pipeline is designed to load, clean, transform the data, and store it in a SQLite database for further analysis or model training.
 
-## Project Overview
+Key Features:
+Data Loading and Cleaning:
 
-The **Customer Churn Data Pipeline** project is designed to predict customer churn for a telecommunications company. Churn refers to the percentage of customers that stop using a service over a given period. This project uses a dataset to train and evaluate a machine learning model that can predict whether a customer is likely to churn.
+Reads a CSV file containing customer churn data.
+Cleans the 'TotalCharges' column by converting it to numeric and filling any missing values with the column's mean.
+Converts the 'SeniorCitizen' column into categorical values ('Yes' or 'No').
+Data Transformation:
 
-## Features
+Calculates the average monthly charges based on the total charges and tenure.
+Groups customers into tenure categories (e.g., 0-1 year, 1-2 years).
+Encodes categorical variables using LabelEncoder to make them suitable for machine learning models.
+Database Management:
 
-- **Data Loading and Cleaning**: The project starts by loading the data from a CSV file, cleaning it by handling missing values, and converting data types as needed.
-- **Data Transformation**: New features such as average monthly charges and tenure groups are created to enhance the model's predictive power.
-- **Exploratory Data Analysis (EDA)**: Visualizations and statistical analyses are performed to understand the data distribution and correlations between features.
-- **Machine Learning Model**: A RandomForestClassifier is used to train the model, and its performance is evaluated using accuracy, classification report, and a confusion matrix.
-- **SQLite Database Integration**: The cleaned and transformed data is stored in an SQLite database for efficient querying and analysis.
+Creates a SQLite database and a customers1 table to store the processed data.
+Inserts the transformed data into the SQLite database.
+Folder Structure:
+.idea/: Contains project-specific settings for your IDE.
+.venv/: Virtual environment for Python dependencies.
+main.py: The main script that runs the data pipeline.
+How to Run
+Clone the repository:
 
-## Project Structure
+bash
+Copy code
+git clone https://github.com/your-username/CustomerChurnDataPipeline.git
+cd CustomerChurnDataPipeline
+Set up the virtual environment:
 
-```plaintext
-.venv/
-│
-├── src/
-│   ├── data_loader.py            # Module to load data from CSV
-│   ├── data_preprocessor.py      # Module to preprocess and clean data
-│   ├── exploratory_analysis.py   # Module for performing exploratory data analysis
-│   ├── model_trainer.py          # Module to train and evaluate the model
-│                      
-│── main.py # Main script to run the project
-├── data/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset used in the project
-│
-├── telco_customer_churn.db       # SQLite database containing the processed data
-│
-└── README.md                     # Project documentation
+bash
+Copy code
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+Install the required dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Run the data pipeline:
+
+bash
+Copy code
+python main.py
+Requirements
+Python 3.x
+pandas
+numpy
+sqlite3
+scikit-learn
+Future Enhancements
+Implement data visualization for better insights.
+Add support for other database types (e.g., PostgreSQL).
+Integrate machine learning models for churn prediction.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
