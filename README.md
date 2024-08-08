@@ -22,8 +22,8 @@ The **Customer Churn Data Pipeline** project is designed to predict customer chu
 │   ├── data_preprocessor.py      # Module to preprocess and clean data
 │   ├── exploratory_analysis.py   # Module for performing exploratory data analysis
 │   ├── model_trainer.py          # Module to train and evaluate the model
-│                      # Main script to run the project
-│── main.py
+│                      
+│── main.py # Main script to run the project
 ├── data/
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset used in the project
 │
