@@ -1,4 +1,4 @@
-# Telco Customer Churn Data Pipeline
+# Customer Churn Data Pipeline
 
 ## Project Description
 
