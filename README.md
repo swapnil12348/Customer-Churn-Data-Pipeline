@@ -15,15 +15,15 @@ The **Customer Churn Data Pipeline** project is designed to predict customer chu
 ## Project Structure
 
 ```plaintext
-CustomerChurnDataPipeline/
+.venv/
 │
 ├── src/
 │   ├── data_loader.py            # Module to load data from CSV
 │   ├── data_preprocessor.py      # Module to preprocess and clean data
 │   ├── exploratory_analysis.py   # Module for performing exploratory data analysis
 │   ├── model_trainer.py          # Module to train and evaluate the model
-│   └── main.py                   # Main script to run the project
-│
+│                      # Main script to run the project
+│── main.py
 ├── data/
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset used in the project
 │
